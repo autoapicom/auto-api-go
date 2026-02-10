@@ -4,9 +4,9 @@
 [![Go Version](https://img.shields.io/github/go-mod/go-version/autoapicom/auto-api-go)](go.mod)
 [![License](https://img.shields.io/github/license/autoapicom/auto-api-go)](LICENSE)
 
-Go client for [auto-api.com](https://auto-api.com) — car listings API across multiple marketplaces.
+Go client for [auto-api.com](https://auto-api.com) — car listings from 8 marketplaces (encar, mobile.de, autoscout24, che168, dongchedi, guazi, dubicars, dubizzle).
 
-One API to access car listings from 8 marketplaces: encar, mobile.de, autoscout24, che168, dongchedi, guazi, dubicars, dubizzle. Search offers, track price changes, and get listing data in a unified format.
+No external dependencies. Stdlib `net/http` + `encoding/json` only. Supports context for timeouts and cancellation.
 
 ## Installation
 
@@ -67,7 +67,7 @@ info, err := client.GetOfferByURL(ctx, "https://www.encar.com/dc/dc_cardetailvie
 
 ### Decode offer data
 
-Offer data varies between sources, so it's stored as `json.RawMessage`. Decode into `OfferData` or your own struct:
+Each marketplace returns different fields, so `OfferItem.Data` is `json.RawMessage`. Unmarshal it yourself:
 
 ```go
 for _, item := range offers.Result {

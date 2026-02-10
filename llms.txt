@@ -1,0 +1,32 @@
+# auto-api-go
+
+> Go client for auto-api.com — car listings API from 8 automotive marketplaces (encar, mobile.de, autoscout24, che168, dongchedi, guazi, dubicars, dubizzle).
+
+## Install
+
+go get github.com/autoapicom/auto-api-go
+
+## Quick Start
+
+client := autoapi.NewClient("your-api-key")
+offers, err := client.GetOffers(ctx, "encar", &autoapi.OffersParams{Page: 1, Brand: "BMW"})
+
+## API Methods
+
+- GetFilters(ctx, source) — available filters (brands, models, body types)
+- GetOffers(ctx, source, params) — search listings with pagination and filters
+- GetOffer(ctx, source, innerID) — single listing by ID
+- GetChangeID(ctx, source, date) — get change_id by date (yyyy-mm-dd)
+- GetChanges(ctx, source, changeID) — changes feed (added/changed/removed)
+- GetOfferByURL(ctx, url) — listing data by marketplace URL
+
+## Auth
+
+- GET requests: api_key query parameter
+- POST /api/v1/offer/info: x-api-key header
+
+## Links
+
+- [Documentation](https://auto-api.com)
+- [Source Code](https://github.com/autoapicom/auto-api-go)
+- [README](https://github.com/autoapicom/auto-api-go/blob/main/README.md)

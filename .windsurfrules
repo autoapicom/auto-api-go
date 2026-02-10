@@ -1,0 +1,19 @@
+# auto-api-go
+
+Go client for the auto-api.com vehicle data API.
+
+- Go 1.21+, stdlib only, zero dependencies
+- Single Client struct with 6 public methods
+- context.Context as first parameter of every method
+- Errors via return (value, error), use errors.As() to check type
+- PascalCase for exported names
+- OfferItem.Data is json.RawMessage — varies between sources
+- `api_key` in query string for GET, `x-api-key` header for POST
+- English godoc comments
+
+## Never
+
+- Add external dependencies (no third-party packages)
+- Use panic for error handling
+- Use init() functions
+- Add unnecessary interfaces or abstractions

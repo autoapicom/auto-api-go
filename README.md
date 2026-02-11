@@ -1,8 +1,8 @@
 # auto-api-client-go
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/autoapicom/auto-api-go.svg)](https://pkg.go.dev/github.com/autoapicom/auto-api-go)
-[![Go Version](https://img.shields.io/github/go-mod/go-version/autoapicom/auto-api-go)](go.mod)
-[![License](https://img.shields.io/github/license/autoapicom/auto-api-go)](LICENSE)
+[![Go Version](https://img.shields.io/badge/Go-1.21%2B-blue)](go.mod)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Go client for [auto-api.com](https://auto-api.com) — car listings from 8 marketplaces (encar, mobile.de, autoscout24, che168, dongchedi, guazi, dubicars, dubizzle).
 

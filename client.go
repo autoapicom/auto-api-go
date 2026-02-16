@@ -27,7 +27,7 @@ type Client struct {
 func NewClient(apiKey string) *Client {
 	return &Client{
 		apiKey:     apiKey,
-		baseURL:    "https://auto-api.com",
+		baseURL:    "https://api1.auto-api.com",
 		apiVersion: "v2",
 		httpClient: &http.Client{Timeout: 30 * time.Second},
 	}
